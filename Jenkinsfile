@@ -14,7 +14,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh '\'docker build -t yuvalsal/hello-world-python:${env.BUILD_NUMBER}  .\''
+        sh '"""docker build -t yuvalsal/hello-world-python:${env.BUILD_NUMBER} ."""'
       }
     }
 
