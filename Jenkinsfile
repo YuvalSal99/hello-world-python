@@ -20,7 +20,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'docker run -itd --name python -p 8080:8080 python'
+        sh 'docker run -itd --name python -p 8080:8080 yuvalsal/hello-world-python:$BUILD_NUMBER'
         sleep 5
         sh 'curl localhost:8080'
         sh 'docker stop python && docker rm python'
